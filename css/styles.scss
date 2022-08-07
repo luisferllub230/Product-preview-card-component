@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import "./container";
+@import "./img";
+@import "./body";
+@import "./footer";
+
+/**************************variable**************************************/
+//variable layouts
+$mobile-width:375px;
+$desktop-width:1440px;
+//variable colors
+$color-green-Dark: hsl(158, 36%, 37%);
+$color-Cream: hsl(30, 38%, 92%);
+$color-Very-dark-blue: hsl(212, 21%, 14%);
+$color-Dark-grayish-blue: hsl(228, 12%, 48%);
+$color-White: hsl(0, 0%, 100%);
+//variable fonts
+$font-Fraunces: 'Fraunces', serif;
+$font-Montserrat: 'Montserrat', sans-serif;
+
+
+html,body{
+    margin:0;
+    padding:0;
+    font-family: $font-Montserrat;
+    background-color: $color-Cream;
+    min-width:100vw;
+    min-height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main{
+    @media screen and (max-width: 450px){
+        .container{
+            @include container(5%, $mobile-width);
+        }
+        img{
+            @include imgPhone(5%,5%);
+        }
+        .container-body{
+            @include body();
+            p{line-height: 1.5;}
+        }
+        .container-footer{
+            @include footer();
+        }
+    }
+    @media screen and (min-width: 450px){
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            @include container(3%, 700px);
+        }
+        img{
+            @include imgDesktop(3%,3%);
+        }
+        .container-body{
+            h1{
+                margin: 20px 0;
+            }
+            p{
+                margin: 40px 0;
+                line-height: 2;
+            }
+            @include body();
+            padding: 20px 50px;
+        }
+        .container-footer{
+            @include footer();
+        }
+    }
+}

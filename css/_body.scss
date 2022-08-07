@@ -1,0 +1,32 @@
+@mixin body () {
+    padding: 15px;
+            h1{
+                font-size: 11px;
+                text-transform: uppercase;
+                letter-spacing: 5px;
+                color: $color-Dark-grayish-blue;
+            }
+            h3{
+                font-family: $font-Fraunces;
+                font-size: 30px;
+                font-weight: 700;
+                margin-top: 5px;
+                margin-bottom: 5px;
+            }
+            p{
+                font-size: 14px;
+                color: $color-Dark-grayish-blue;
+            }
+            h4{
+                #span-1{
+                    font-size: 30px;
+                    color: $color-green-Dark;
+                    margin-right: 10px;
+                }   
+                #span-2{
+                    font-size: 15px;
+                    text-decoration-line:line-through;
+                    color: $color-Dark-grayish-blue;
+                }
+            }
+}

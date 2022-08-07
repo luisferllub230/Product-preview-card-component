@@ -1,0 +1,6 @@
+@mixin container ($borderRadius, $width) {
+    max-width: $width;
+    border-radius: $borderRadius;
+    margin: 20px;
+    background-color: $color-White;
+}
